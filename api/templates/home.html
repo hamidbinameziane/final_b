@@ -10,13 +10,13 @@
         </head>
         <body>
             <div id="container">
-            <canvas id="canvas" style="background-color: rgba(255,255,255)"></canvas>
+            
             <div id="mySidemenu" class="sidemenu">
                 <a href="javascript:void(0)" class="close" onclick="closeSM()">&times;</a>
                 <div class="sm-wrapper">
                     <div class="tools">
                         <input type="range" id="myr" value="2">
-                        <input id="myn" value="2" />
+                        <input id="myn" value="2" style="border: 0px;background-color: rgba(255,255,255,0.0);"/>
                         <input type="color" id="myc" value="#000">
                           <label class="color-select" for="myc" style="float: right;"><span class="material-symbols-outlined" id="pclr">
                             palette
@@ -44,7 +44,9 @@
             </div>
             <div id="pg-content">
                 <div style="font-size:40px;font-weight:900;font-family: Freehand;color:#5b5b5b" onclick="openSM()">Whiteboard</div>
+                <canvas id="canvas" style="background-color: rgba(255,255,255)"></canvas>
             </div>
         </div>
+        
         </body>
     </html>

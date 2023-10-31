@@ -40,8 +40,9 @@ window.addEventListener('load' , ()=> {
         var src = url.createObjectURL(f);
       
         img.src = src;
+
         img.onload = function(){
-          ctx.drawImage(img,0,0);
+          ctx.drawImage(img, 0, 0);
         }
       }
   
