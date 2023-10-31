@@ -1,0 +1,104 @@
+
+.bg-light{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(232, 229, 236);
+    color: rgb(17, 17, 17);
+}
+.blue{
+    color: blue;
+}
+.green{
+    color: green;
+}
+.black{
+    color: black;
+}
+.red{
+    color: red;
+}
+
+.pens {
+    background-color: rgb(232, 229, 236); /* Blue background */
+    border-radius: 25%;
+    border: none; /* Remove borders */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  
+  /* Darker background on mouse-over */
+  .pens:hover {
+    background-color: white;
+  }
+
+  .bg-light
+{
+    display: contents;
+}
+canvas
+{
+    background-color: aliceblue;
+
+}
+.btn
+{
+
+    background-color: rgb(56, 42, 147);
+}
+
+input[type=color] {
+  visibility: hidden;
+}
+.material-symbols-outlined {
+    font-size: 40px;
+    color: black;
+    font-weight: 900;
+    display: inline-block;
+    vertical-align: middle;
+}
+.material-symbols-outlined:hover {
+    font-weight: 500;
+}
+input[type=range] {
+    accent-color: black;
+}
+#myn
+{
+    width: 4ch;
+    border:0;
+    text-align: center;
+    font-family: Freehand;
+    font-size: 25px;
+    font-weight: 900;
+    vertical-align: middle;
+    background-color: #e8e5ec;
+}
+#allC, .navbar-brand
+{
+    border:0;
+    text-align: center;
+    font-family: Freehand;
+    font-size: 35px;
+    color: red;
+    font-weight: 900;
+    vertical-align: middle;
+    background-color: #e8e5ec;
+}
+#allC:hover
+{
+    font-weight: 500;
+}
+input[type=file] {
+    visibility: hidden;
+  }
+nav {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
