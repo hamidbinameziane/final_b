@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>Whiteboard</title>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Freehand&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="{{ url_for('static',filename='css/style2.css') }}">
+            <script src="{{ url_for('static', filename='js/can2.js')}}"></script>
+        </head>
+        <body>
+            <div id="container">
+            <canvas id="canvas" style="background-color: rgba(255,255,255)"></canvas>
+            <div id="mySidemenu" class="sidemenu">
+                <a href="javascript:void(0)" class="close" onclick="closeSM()">&times;</a>
+                <div class="sm-wrapper">
+                    <div class="tools">
+                        <input type="range" id="myr" value="2">
+                        <input id="myn" value="2" />
+                        <input type="color" id="myc" value="#000">
+                          <label class="color-select" for="myc" style="float: right;"><span class="material-symbols-outlined" id="pclr">
+                            palette
+                            </span></label>
+                
+                      </div>
+                      <span class="material-symbols-outlined" id="undo" style="font-weight: 500;color:#c8c8c8">
+                        undo
+                        </span>
+                        <form>
+                        <input type = "file" name = "file" id="file" onchange ="submit_form() ; return false;"/>
+                        <label class="color-select" for="file" style="float: right;"><span class="material-symbols-outlined" id="pclr">
+                          image
+                          </span></label>
+                        <script>
+                          function submit_form()
+                          {
+                            document.form.submit();
+                          }
+                          </script>
+                     </form>
+                     
+                           <button id="allC">Clear</button>
+                      </div>
+            </div>
+            <div id="pg-content">
+                <div style="font-size:40px;font-weight:900;font-family: Freehand;color:#5b5b5b" onclick="openSM()">Whiteboard</div>
+            </div>
+        </div>
+        </body>
+    </html>
