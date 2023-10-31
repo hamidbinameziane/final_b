@@ -36,7 +36,8 @@ body{
 
 #pg-content{
     transition: margin-left 0.5s;
-    padding: 16px;
+    padding: 0;
+    margin: 0;
 }
 
 #container canvas, #pg-content {
@@ -53,18 +54,17 @@ body {
 input[type=color] {
     visibility: hidden;
   }
-  input[type=file] {
-    visibility: hidden;
-  }
   .material-symbols-outlined {
       font-size: 50px;
       color: #5b5b5b;
       font-weight: 900;
       display: inline-block;
       vertical-align: middle;
+      padding: 25px;
   }
   .material-symbols-outlined:hover {
       font-weight: 500;
+      padding: 25px;
   }
   input[type=range] {
       accent-color: #5b5b5b;
@@ -73,6 +73,7 @@ input[type=color] {
   {
       width: 4ch;
       border:0;
+      padding: 25px;
       text-align: center;
       font-family: Freehand;
       font-size: 25px;
@@ -82,6 +83,7 @@ input[type=color] {
   #allC
   {
       border:0;
+      margin-right: 60%;
       text-align: center;
       font-family: Freehand;
       font-size: 40px;
@@ -96,4 +98,17 @@ input[type=color] {
   }
   input[type=file] {
       visibility: hidden;
+    }
+
+    #undo
+    {
+        padding: 25px;
+    }
+    .navig
+    {
+        padding-left: 20px;
+        font-size:40px;
+        font-weight:900;
+        font-family: Freehand;
+        color:#5b5b5b;
     }

@@ -13,37 +13,47 @@
             
             <div id="mySidemenu" class="sidemenu">
                 <a href="javascript:void(0)" class="close" onclick="closeSM()">&times;</a>
-                <div class="sm-wrapper">
-                    <div class="tools">
+                <div class="sm-wrapper" style="float: right;margin: 20px;">
+                    <div>
+                        <div>
                         <input type="range" id="myr" value="2">
                         <input id="myn" value="2" style="border: 0px;background-color: rgba(255,255,255,0.0);"/>
-                        <input type="color" id="myc" value="#000">
-                          <label class="color-select" for="myc" style="float: right;"><span class="material-symbols-outlined" id="pclr">
+                        </div>
+                        <div>
+                        <input type="color" id="myc" value="#000" style="margin: 0px;padding: 0;">
+                          <label class="color-select" for="myc"><span class="material-symbols-outlined" id="pclr" style="margin-right: 50%;">
                             palette
                             </span></label>
+                        </div>
                 
                       </div>
-                      <span class="material-symbols-outlined" id="undo" style="font-weight: 500;color:#c8c8c8">
-                        undo
-                        </span>
-                        <form>
+                      
+                    <div>
                         <input type = "file" name = "file" id="file" onchange ="submit_form() ; return false;"/>
-                        <label class="color-select" for="file" style="float: right;"><span class="material-symbols-outlined" id="pclr">
+                        <label class="color-select" for="file"><span class="material-symbols-outlined" id="pclr" style="margin-right: 15%;margin-left: 15%;">
                           image
                           </span></label>
+                        </div>
                         <script>
                           function submit_form()
                           {
                             document.form.submit();
                           }
                           </script>
-                     </form>
+                          <div>
+                            <span class="material-symbols-outlined" id="undo" style="margin-right: 15%;margin-left: 15%;font-weight: 500;color:#c8c8c8">
+                              undo
+                              </span>
+                          </div>
+                          <div>
+                            <button id="allC" style="float: right;">Clear</button>
+                        </div>
                      
-                           <button id="allC">Clear</button>
+
                       </div>
             </div>
             <div id="pg-content">
-                <div style="font-size:40px;font-weight:900;font-family: Freehand;color:#5b5b5b" onclick="openSM()">Whiteboard</div>
+                <div class="navig"><a onclick="openSM()">Whiteboard</a><a style="margin-left: 500%;">About</a></div>
                 <canvas id="canvas" style="background-color: rgba(255,255,255)"></canvas>
             </div>
         </div>
