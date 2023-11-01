@@ -153,6 +153,10 @@ window.addEventListener('load' , ()=> {
     canvas.addEventListener('pointerout', endP)
     canvas.addEventListener('pointerout', endP)
     canvas.addEventListener('pointermove', Draw)
+    canvas.addEventListener("touchstart", startP);
+    canvas.addEventListener("touchend", endP);
+    canvas.addEventListener("touchcancel", endP);
+    canvas.addEventListener("touchmove", Draw);
     clr.addEventListener('input', clrC)
     sze.addEventListener('input', szeC)
     num.addEventListener('input', numC)
