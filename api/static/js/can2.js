@@ -169,7 +169,7 @@ window.addEventListener('load' , ()=> {
         var simulatedEvent = document.createEvent("MouseEvent");
         simulatedEvent.initMouseEvent(type, true, true, window, 1, 
                                       first.screenX, first.screenY, 
-                                      first.clientX, first.clientY, false, 
+                                      first.offsetX, first.offsetY, false, 
                                       false, false, false, 0/*left*/, null);
     
         first.target.dispatchEvent(simulatedEvent);
