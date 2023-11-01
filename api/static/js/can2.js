@@ -60,10 +60,12 @@ window.addEventListener('load' , ()=> {
         ctx.beginPath()
 
     }
-    function Draw(e)
+    function Draw(event)
     {
         if(!paint)return;
-        ctx.lineTo(e.offsetX, e.offsetY)
+        let x = event.clientX - canvas.offsetLeft;
+        let y = event.clientY - canvas.offsetTop;
+        ctx.lineTo(x, y)
         ctx.lineJoin = 'round';
         ctx.lineCap = 'round';
         ctx.stroke()
@@ -83,8 +85,8 @@ window.addEventListener('load' , ()=> {
     {
         if(!paint)return;
         var touch = e.touches[0];
-        var x = touch.pageX;
-        var y = touch.pageY;
+        var x = touch.pageX - canvas.offsetLeft;
+        var y = touch.pageY - canvas.offsetTop;
         ctx.lineTo(x, y)
         ctx.lineJoin = 'round';
         ctx.lineCap = 'round';
@@ -176,7 +178,7 @@ window.addEventListener('load' , ()=> {
     canvas.addEventListener("touchstart", startP);
     canvas.addEventListener("touchend", endP);
     canvas.addEventListener("touchcancel", endP);
-    canvas.addEventListener("touchmove", DrawT);
+    canvas.addEventListener("touchmove", Draw);
     clr.addEventListener('input', clrC)
     sze.addEventListener('input', szeC)
     num.addEventListener('input', numC)
