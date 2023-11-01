@@ -79,6 +79,25 @@ window.addEventListener('load' , ()=> {
         }
         h++
     }
+    function DrawT(e)
+    {
+        if(!paint)return;
+            ctx.lineTo(e.clientX, e.clientY)
+            ctx.lineJoin = 'round';
+            ctx.lineCap = 'round';
+            ctx.stroke()
+        if (h == 50)
+        {
+            his_P()
+            h = 0
+            if (his_array.length == 1)
+            {
+            und.style.color = 'black'
+            und.style.fontWeight = 900
+            }
+        }
+        h++
+    }
     function szeC()
     {
         if (sze.value > 100)
@@ -154,7 +173,7 @@ window.addEventListener('load' , ()=> {
     canvas.addEventListener("touchstart", startP);
     canvas.addEventListener("touchend", endP);
     canvas.addEventListener("touchcancel", endP);
-    canvas.addEventListener("touchmove", Draw);
+    canvas.addEventListener("touchmove", DrawT);
     clr.addEventListener('input', clrC)
     sze.addEventListener('input', szeC)
     num.addEventListener('input', numC)
