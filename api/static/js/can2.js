@@ -63,10 +63,10 @@ window.addEventListener('load' , ()=> {
     function Draw(e)
     {
         if(!paint)return;
-            ctx.lineTo(e.offsetX, e.offsetY)
-            ctx.lineJoin = 'round';
-            ctx.lineCap = 'round';
-            ctx.stroke()
+        ctx.lineTo(e.offsetX, e.offsetY)
+        ctx.lineJoin = 'round';
+        ctx.lineCap = 'round';
+        ctx.stroke()
         if (h == 50)
         {
             his_P()
@@ -82,10 +82,13 @@ window.addEventListener('load' , ()=> {
     function DrawT(e)
     {
         if(!paint)return;
-            ctx.lineTo(e.clientX, e.clientY)
-            ctx.lineJoin = 'round';
-            ctx.lineCap = 'round';
-            ctx.stroke()
+        var touch = e.touches[0];
+        var x = touch.pageX;
+        var y = touch.pageY;
+        ctx.lineTo(x, y)
+        ctx.lineJoin = 'round';
+        ctx.lineCap = 'round';
+        ctx.stroke()
         if (h == 50)
         {
             his_P()
