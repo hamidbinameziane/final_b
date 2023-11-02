@@ -168,10 +168,7 @@ window.addEventListener('load' , ()=> {
 
 
 
-    canvas.addEventListener('pointerdown', startP)
-    canvas.addEventListener('pointerup', endP)
-    canvas.addEventListener('pointerout', endP)
-    canvas.addEventListener('pointermove', Draw)
+
     canvas.addEventListener('touchstart', startP);
     canvas.addEventListener('touchend', endP);
     canvas.addEventListener('touchmove', DrawT);
