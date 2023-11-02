@@ -81,9 +81,8 @@ window.addEventListener('load' , ()=> {
     function DrawT(event)
     {
         if(!paint)return;
-        let x = event.clientX - canvas.offsetLeft;
-        let y = event.clientY - canvas.offsetTop;
-        ctx.lineTo(x, y)
+        e.preventDefault();
+        ctx.lineTo(event.offsetX, event.offsetY)
         ctx.lineJoin = 'round';
         ctx.lineCap = 'round';
         ctx.stroke()
@@ -172,6 +171,9 @@ window.addEventListener('load' , ()=> {
     canvas.addEventListener('pointerup', endP)
     canvas.addEventListener('pointerout', endP)
     canvas.addEventListener('pointermove', Draw)
+    canvas.addEventListener('touchstart', startP);
+    canvas.addEventListener('touchend', endP);
+    canvas.addEventListener('touchmove', DrawT);
 
     clr.addEventListener('input', clrC)
     sze.addEventListener('input', szeC)
