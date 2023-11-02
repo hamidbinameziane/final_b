@@ -81,11 +81,8 @@ window.addEventListener('load' , ()=> {
     function DrawT(event)
     {
         if(!paint)return;
-        event.preventDefault();
-        event.stopPropagation();
         ctx.lineTo(event.touches[0].clientX, event.touches[0].clientY);
-        ctx.lineJoin = 'round';
-        ctx.lineCap = 'round';
+
         ctx.stroke()
         if (h == 50)
         {
@@ -168,7 +165,10 @@ window.addEventListener('load' , ()=> {
 
 
 
-
+    canvas.addEventListener('pointerdown', startP)
+    canvas.addEventListener('pointerup', endP)
+    canvas.addEventListener('pointerout', endP)
+    canvas.addEventListener('pointermove', Draw)
     canvas.addEventListener('touchstart', startP);
     canvas.addEventListener('touchend', endP);
     canvas.addEventListener('touchmove', DrawT);
