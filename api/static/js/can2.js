@@ -82,7 +82,7 @@ window.addEventListener('load' , ()=> {
     {
         if(!paint)return;
         e.preventDefault();
-        ctx.lineTo(event.offsetX, event.offsetY)
+        ctx.lineTo(event.clientX, event.clientY);
         ctx.lineJoin = 'round';
         ctx.lineCap = 'round';
         ctx.stroke()
