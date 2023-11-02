@@ -81,6 +81,8 @@ window.addEventListener('load' , ()=> {
     function DrawT(event)
     {
         if(!paint)return;
+        event.preventDefault();
+        event.stopPropagation();
         ctx.lineTo(event.touches[0].clientX, event.touches[0].clientY);
         ctx.lineJoin = 'round';
         ctx.lineCap = 'round';
