@@ -86,6 +86,8 @@ window.addEventListener('load' , ()=> {
         ctx.lineJoin = 'round';
         ctx.lineCap = 'round';
         ctx.stroke()
+        ctx.beginPath();
+        ctx.moveTo(event.clientX, event.clientY);
         if (h == 50)
         {
             his_P()
