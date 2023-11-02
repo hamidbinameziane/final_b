@@ -45,7 +45,6 @@ body{
   }
  
 body {
-    touch-action:none;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -112,4 +111,8 @@ input[type=color] {
         font-weight:900;
         font-family: Freehand;
         color:#5b5b5b;
+    }
+    #canvas
+    {
+        touch-action:none;
     }

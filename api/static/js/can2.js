@@ -17,7 +17,6 @@ window.addEventListener('load' , ()=> {
     var und = document.getElementById('undo')
     var image = document.getElementById('file')
 
-
     var his_array = new Array()
     var step = -1;
     var can_p = new Image();
@@ -81,12 +80,11 @@ window.addEventListener('load' , ()=> {
         }
         h++
     }
-    function DrawT(e)
+    function DrawT(event)
     {
         if(!paint)return;
-        var touch = e.touches[0];
-        var x = touch.clientX - canvas.offsetLeft;
-        var y = touch.clientY - canvas.offsetTop;
+        let x = event.clientX - canvas.offsetLeft;
+        let y = event.clientY - canvas.offsetTop;
         ctx.lineTo(x, y)
         ctx.lineJoin = 'round';
         ctx.lineCap = 'round';
@@ -172,10 +170,10 @@ window.addEventListener('load' , ()=> {
 
 
 
-    canvas.addEventListener("touchstart", startP);
-    canvas.addEventListener("touchend", endP);
-
-    canvas.addEventListener("touchmove", DrawT);
+    canvas.addEventListener('pointerdown', startP)
+    canvas.addEventListener('pointerup', endP)
+    canvas.addEventListener('pointerout', endP)
+    canvas.addEventListener('pointermove', DrawT)
 
     clr.addEventListener('input', clrC)
     sze.addEventListener('input', szeC)
