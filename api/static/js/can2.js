@@ -81,7 +81,7 @@ window.addEventListener('load' , ()=> {
     function DrawT(event)
     {
         if(!paint)return;
-        ctx.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+        ctx.lineTo(event.clientX - canvas.offsetX, event.clientY - canvas.offsetY);
         ctx.lineJoin = 'round';
         ctx.lineCap = 'round';
         ctx.stroke()
