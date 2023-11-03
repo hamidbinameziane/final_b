@@ -80,10 +80,8 @@ window.addEventListener('load' , ()=> {
     }
     function DrawT(event)
     {
-        event.preventDefault();
-        event.stopPropagation();
         if(!paint)return;
-        ctx.lineTo(event.touches[0].clientX, event.touches[0].clientY);
+        ctx.lineTo(event.offsetX, event.offsetY)
         ctx.lineJoin = 'round';
         ctx.lineCap = 'round';
         ctx.stroke()
