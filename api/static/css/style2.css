@@ -116,4 +116,5 @@ input[type=color] {
     #canvas
     {
         touch-action:none;
+        pointer-events: none;
     }
